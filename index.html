@@ -172,13 +172,36 @@
   }
 
  #myBtn:hover {
-  background-image: linear-gradient(180deg, rgba(107, 0, 54, 0.514), rgba(82, 0, 41, 0.411));
+    background-image: linear-gradient(180deg, rgba(107, 0, 54, 0.514), rgba(82, 0, 41, 0.411));
+  }
+
+  #loader {
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  #myDiv {
+    display: none;
+    text-align: center;
+  }
+
+  .Marylogo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   </style>
 </head>
-<body>
-  
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader"><img src="https://i.imgur.com/suqzrAW.gif" alt="MarylandLogo" class="Marylogo" width="500" height="500"></div>
+  <div style="display:none;" id="myDiv">
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
   <script>
     // Get the button
@@ -329,14 +352,26 @@
     </div>
   </div>
 
+
   <br>
   <br>
 
   <div class="footer">
     <a class="copyright">© 2022 Its_Maryjane</a>
   </div>
-
+</div>
   </div>
-
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
 </body>
 </html>
