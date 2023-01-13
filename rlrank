@@ -1,0 +1,28 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <head>
+        <title>Its_Maryjane - Rank</title>
+    </head>
+<body>
+
+<script>
+    fetch('https://simplescraper.io/api/lK6O8D3j2fIEl30wm0qS?apikey=kxAr0VKbEERmdfqmigx2z9h0FRsLc1VK&limit=100', {
+    headers: {
+        'apikey': 'kxAr0VKbEERmdfqmigx2z9h0FRsLc1VK'
+    }
+}).then(response => response.json())
+  .then(data => {
+    document.getElementById("results").innerHTML = 'Duos: ' + data.data[0].Duos + '<br> Standard: ' + data.data[0].Standard;
+  });
+</script>
+
+<div id="results"></div>
+
+
+</body>
+
+</html>
